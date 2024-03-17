@@ -22,7 +22,7 @@ HIDE_DATASET = True  # set False when 100% sure about repo quality
 ##################################
 LICENSE: License = License.Unknown()
 APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.SearchAndRescue()]
-CATEGORY: Category = Category.Safety(extra=[Category.Aerial(), Category.Drones()])
+CATEGORY: Category = Category.Aerial(extra=[Category.Drones()])
 
 CV_TASKS: List[CVTask] = [CVTask.ObjectDetection()]
 ANNOTATION_TYPES: List[AnnotationType] = [AnnotationType.ObjectDetection()]
@@ -46,7 +46,7 @@ GITHUB_URL: str = "https://github.com/dataset-ninja/palm-trees"
 DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = None
 # Optional link for downloading original dataset (e.g. "https://some.com/dataset/download")
 
-CLASS2COLOR: Optional[Dict[str, List[str]] or Literal["predefined"]] = "predefined"
+CLASS2COLOR: Optional[Dict[str, List[str]] or Literal["predefined"]] = {"palm tree": [255, 0, 0]}
 # If specific colors for classes are needed, fill this dict (e.g. {"class1": [255, 0, 0], "class2": [0, 255, 0]})
 
 # If you have more than the one paper, put the most relatable link as the first element of the list
@@ -64,7 +64,7 @@ ORGANIZATION_URL: Optional[Union[str, List[str]]] = "https://www.psu.edu.sa/"
 
 # Set '__PRETEXT__' or '__POSTTEXT__' as a key with string value to add custom text. e.g. SLYTAGSPLIT = {'__POSTTEXT__':'some text}
 SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = {
-    "dorne types": ["DJI Phantom 4 Pro dron", "DJI Mavic Pro dron"]
+    "dorne types": ["DJI Phantom 4 Pro drone", "DJI Mavic Pro drone"]
 }
 TAGS: Optional[
     List[

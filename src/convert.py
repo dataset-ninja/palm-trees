@@ -60,8 +60,8 @@ def convert_and_upload_supervisely_project(
         return sly.Annotation(img_size=(img_height, img_wight), labels=labels, img_tags=[drone])
 
     obj_class = sly.ObjClass("palm tree", sly.Rectangle, color=(255, 0, 0))
-    drone_a = sly.TagMeta("DJI Phantom 4 Pro dron", sly.TagValueType.NONE)
-    drone_b = sly.TagMeta("DJI Mavic Pro dron", sly.TagValueType.NONE)
+    drone_a = sly.TagMeta("DJI Phantom 4 Pro drone", sly.TagValueType.NONE)
+    drone_b = sly.TagMeta("DJI Mavic Pro drone", sly.TagValueType.NONE)
 
     project = api.project.create(workspace_id, project_name, change_name_if_conflict=True)
     meta = sly.ProjectMeta(obj_classes=[obj_class], tag_metas=[drone_a, drone_b])
