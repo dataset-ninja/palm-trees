@@ -64,7 +64,7 @@ ORGANIZATION_URL: Optional[Union[str, List[str]]] = "https://www.psu.edu.sa/"
 
 # Set '__PRETEXT__' or '__POSTTEXT__' as a key with string value to add custom text. e.g. SLYTAGSPLIT = {'__POSTTEXT__':'some text}
 SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = {
-    "dorne types": ["DJI Phantom 4 Pro drone", "DJI Mavic Pro drone"]
+    "drone types": ["DJI Phantom 4 Pro drone", "DJI Mavic Pro drone"]
 }
 TAGS: Optional[
     List[
