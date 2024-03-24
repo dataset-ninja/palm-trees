@@ -21,10 +21,10 @@ HIDE_DATASET = True  # set False when 100% sure about repo quality
 # * After uploading to instance ##
 ##################################
 LICENSE: License = License.Unknown()
-APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.SearchAndRescue()]
-CATEGORY: Category = Category.Aerial(extra=[Category.Drones()])
+APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.Forestry()]
+CATEGORY: Category = Category.Aerial(extra=[Category.Drones(), Category.EnergyAndUtilities()])
 
-CV_TASKS: List[CVTask] = [CVTask.ObjectDetection()]
+CV_TASKS: List[CVTask] = [CVTask.ObjectDetection(), CVTask.Counting()]
 ANNOTATION_TYPES: List[AnnotationType] = [AnnotationType.ObjectDetection()]
 
 RELEASE_DATE: Optional[str] = "2020-05-11"  # e.g. "YYYY-MM-DD"
